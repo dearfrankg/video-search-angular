@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="<%= appname %>App" ng-controller="AppCtrl">
+  <head>
+
+    <title ng-bind="pageTitle"></title>
+
+    <!-- font awesome from BootstrapCDN -->
+<!--     <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+ -->
+    <link rel="stylesheet" type="text/css" href="<%= name %>.css" />
+
+    <script type="text/javascript" src="<%= name %>.js"></script>
+
+  </head>
+  <body>
+
+    <header>
+      <div class="container masthead">
+        <h3 class="text-muted"><%= title %> <small><a href="#">v<%= version %></a></small></h3>
+      </div>
+    </header>
+
+
+    <section class="container" ng-view></section>
+
+
+    <footer class="footer">
+        <div class="container footer-inner">
+          <p> <a href="#">&copy; 2013 Frank Gutierrez</a> </p>
+        </div>
+    </footer>
+
+  </body>
+</html>

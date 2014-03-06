@@ -1,0 +1,4 @@
+core/dist
+core/node_modules
+core/vendor
+core/npm-debug.log

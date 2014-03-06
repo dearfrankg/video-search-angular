@@ -1,0 +1,52 @@
+
+<div class="app home">
+
+
+
+
+  <div class="controls clearfix">
+
+        <label> Filter by genre:
+          <button
+            type="button"
+            class="btn btn-default"
+            ng-model="selectedGenre"
+            data-html="0"
+            ng-options="genre.value as genre.label for genre in genres"
+            ng-change="changeGenre()"
+            bs-select>
+            Action <span class="caret"></span>
+          </button>
+        </label>
+
+
+        <div class="pull-right">
+
+          <label> Amount to load:
+              <input class="load-amt" ng-model="max" />
+          </label>
+
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" ng-click="appendVideos()" >Load More</button>
+
+        </div>
+
+</div>
+
+
+
+    <div class="video-container">
+
+        <ul class="video-list">
+          <li ng-repeat="video in videos">
+            <div class="video-box">
+              <img class="video-image" ng-src="{{video.image_url}}">
+              <div class="title-box">
+                <div class="title">{{ video.title}}</div>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+    </div>
+
+</div>
